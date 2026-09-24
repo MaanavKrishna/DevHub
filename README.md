@@ -8,7 +8,7 @@ A full-stack GitHub discovery workspace. Search public developers and repositori
 - **PostgreSQL + Prisma** for persistent accounts, sessions, and favourites
 - **Better Auth** for email and password registration, login, and secure sessions
 - **GitHub REST API** for live public data, with short-lived server caching and rate-limit feedback
-- **CSS design system** with reusable cards, controls, layouts, responsive breakpoints, and accessible states
+- **CSS design system** with reusable controls, layouts, responsive breakpoints, and accessible states
 - **Vitest** for analytics, validation, and GitHub error behaviour
 
 ## What is included

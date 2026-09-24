@@ -1,71 +1,75 @@
 .compare-tabs {
   display: flex;
-  gap: 8px;
-  margin-bottom: 20px;
+  gap: 0;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #cbd5e5;
 }
 .compare-tabs a {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  border: 1px solid var(--line);
-  background: #fff;
-  color: #64738b;
+  gap: 8px;
+  color: #6e7c95;
   font-size: 13px;
   font-weight: 800;
-  padding: 9px 15px;
-  border-radius: 8px;
+  padding: 13px 20px;
+  border-bottom: 3px solid transparent;
 }
 .compare-tabs a.active {
-  background: #eaf0ff;
   color: var(--blue);
-  border-color: #cbd8fb;
+  border-color: var(--blue);
 }
 .compare-form {
   display: flex;
   align-items: end;
-  gap: 13px;
-  background: #fff;
+  gap: 14px;
+  background: white;
   border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 23px;
-  margin-bottom: 29px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 10px 10px 0 #e4e9f2;
 }
 .compare-form label {
   flex: 1;
 }
 .compare-form .versus {
-  font-size: 12px;
-  color: #91a0b6;
-  font-weight: 800;
-  padding-bottom: 15px;
+  font: 500 12px var(--mono);
+  color: var(--blue);
+  padding-bottom: 17px;
+  text-transform: uppercase;
 }
 .compare-form button {
-  height: 48px;
+  height: 52px;
 }
 .compare-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  gap: 14px;
 }
 .compare-column {
-  background: #fff;
+  background: white;
   border: 1px solid var(--line);
-  border-radius: 15px;
-  padding: 28px;
+  padding: 31px;
+}
+.compare-column:nth-child(2) {
+  border-top: 4px solid #f5bd67;
+}
+.compare-column:first-child {
+  border-top: 4px solid var(--blue);
 }
 .compare-identity {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
 }
 .compare-identity span {
-  font-size: 11px;
-  font-weight: 800;
+  font: 500 10px var(--mono);
   color: var(--blue);
+  text-transform: uppercase;
 }
 .compare-identity h2 {
-  font-size: 24px;
-  margin: 2px 0;
+  font-size: 29px;
+  margin: 3px 0;
+  overflow-wrap: anywhere;
 }
 .compare-identity p {
   font-size: 12px;
@@ -76,27 +80,27 @@
   font-size: 14px;
   color: var(--muted);
   min-height: 48px;
-  margin: 22px 0;
+  margin: 25px 0;
 }
 .compare-repo-icon {
   width: 62px;
   height: 62px;
-  border-radius: 13px;
   display: grid;
   place-items: center;
-  background: #e8efff;
+  background: #e8edff;
   color: var(--blue) !important;
   font-size: 28px !important;
+  flex: none;
 }
 .compare-metrics {
   border-top: 1px solid var(--line);
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 .compare-metrics > div {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  padding: 13px 0;
+  padding: 15px 0;
   border-bottom: 1px solid var(--line);
   font-size: 13px;
 }
@@ -104,7 +108,8 @@
   color: var(--muted);
 }
 .compare-metrics strong {
-  font-weight: 800;
+  font-family: var(--display);
+  font-size: 19px;
 }
 .compare-column > a {
   color: var(--blue);
@@ -116,7 +121,7 @@
 }
 .compare-prompt {
   text-align: center;
-  padding: 80px 20px;
+  padding: 85px 20px;
   color: #8491a6;
 }
 .compare-prompt svg {
@@ -124,8 +129,8 @@
 }
 .compare-prompt h2 {
   color: var(--ink);
-  font-size: 22px;
-  margin: 16px 0 5px;
+  font-size: 28px;
+  margin: 16px 0 6px;
 }
 .compare-prompt p {
   font-size: 14px;
@@ -134,7 +139,6 @@
   background: linear-gradient(90deg, #e8edf4, #f5f7fa, #e8edf4);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
-  border-radius: 10px;
 }
 .skeleton-title {
   height: 42px;

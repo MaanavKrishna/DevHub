@@ -1,20 +1,26 @@
+@import "@fontsource-variable/dm-sans";
+@import "@fontsource-variable/space-grotesk";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
 :root {
-  --ink: #172338;
-  --muted: #65728a;
-  --canvas: #f4f7fb;
+  --ink: #17234a;
+  --muted: #64708a;
+  --canvas: #f3f5f9;
   --white: #fff;
-  --blue: #335bdb;
-  --blue-dark: #2548bc;
-  --teal: #24a6a0;
-  --coral: #ef795e;
-  --line: #dfe6f0;
-  --soft: #e9eff8;
-  --chart-0: #335bdb;
-  --chart-1: #24a6a0;
-  --chart-2: #ef795e;
-  --chart-3: #a077d3;
-  --chart-4: #e8b657;
+  --blue: #3154ef;
+  --blue-dark: #223fc5;
+  --teal: #23a69b;
+  --coral: #f27255;
+  --line: #dbe1eb;
+  --soft: #e9edf6;
+  --chart-0: #3154ef;
+  --chart-1: #23a69b;
+  --chart-2: #f27255;
+  --chart-3: #8e72cc;
+  --chart-4: #e6ad45;
   --chart-5: #6aa2ce;
+  --display: "Space Grotesk Variable", "Arial", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 * {
   box-sizing: border-box;
@@ -26,7 +32,7 @@ body {
   margin: 0;
   background: var(--canvas);
   color: var(--ink);
-  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-family: "DM Sans Variable", "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 button,
@@ -52,13 +58,14 @@ p {
 h1,
 h2,
 h3 {
-  letter-spacing: -0.035em;
+  font-family: var(--display);
+  letter-spacing: -0.055em;
 }
 p {
   line-height: 1.65;
 }
 .shell {
-  width: min(1200px, calc(100% - 56px));
+  width: min(1280px, calc(100% - 80px));
   margin-inline: auto;
 }
 .sr-only {
@@ -80,19 +87,19 @@ p {
   background: var(--ink);
   color: white;
   padding: 10px 16px;
-  border-radius: 8px;
 }
 .skip-link:focus {
   top: 12px;
 }
 :focus-visible {
-  outline: 3px solid #82c8eb;
-  outline-offset: 3px;
+  outline: 3px solid #f6b54f;
+  outline-offset: 4px;
 }
 .site-header {
-  height: 76px;
-  background: rgba(255, 255, 255, 0.94);
-  border-bottom: 1px solid var(--line);
+  height: 82px;
+  background: #111b43;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   position: relative;
   z-index: 20;
 }
@@ -105,48 +112,50 @@ p {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-size: 25px;
-  font-weight: 800;
-  letter-spacing: -0.07em;
+  gap: 11px;
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.075em;
   white-space: nowrap;
 }
 .brand-mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  background: var(--blue);
-  color: white;
+  width: 38px;
+  height: 38px;
+  background: #f5bd67;
+  color: #111b43;
   display: grid;
   place-items: center;
-  box-shadow: 0 6px 12px rgba(51, 91, 219, 0.18);
+  transform: rotate(-8deg);
+}
+.brand-mark svg {
+  transform: rotate(8deg);
 }
 .brand-dot {
-  color: var(--blue);
+  color: #f5bd67;
 }
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   margin-left: auto;
 }
 .nav-link {
   display: flex;
   align-items: center;
   gap: 9px;
-  padding: 10px 15px;
-  border-radius: 9px;
-  color: #5d6c83;
-  font-size: 14px;
+  padding: 11px 17px;
+  color: #aeb9d7;
+  font-size: 13px;
   font-weight: 700;
   transition:
-    background 0.15s,
-    color 0.15s;
+    color 0.15s,
+    background 0.15s;
 }
 .nav-link:hover,
 .nav-link.active {
-  color: var(--blue);
-  background: #edf2ff;
+  color: white;
+  background: rgba(255, 255, 255, 0.11);
 }
 .nav-actions {
   display: flex;
@@ -160,13 +169,13 @@ p {
   font-weight: 700;
 }
 .account-avatar {
-  width: 31px;
-  height: 31px;
-  border-radius: 50%;
-  background: #deecf3;
-  color: #246479;
+  width: 32px;
+  height: 32px;
+  background: #f5bd67;
+  color: #111b43;
   display: grid;
   place-items: center;
+  border-radius: 50%;
 }
 .account-name {
   max-width: 120px;
@@ -179,7 +188,7 @@ p {
   border: 0;
   background: transparent;
   padding: 8px;
-  color: var(--ink);
+  color: white;
 }
 .button {
   border: 0;
@@ -187,10 +196,9 @@ p {
   align-items: center;
   justify-content: center;
   gap: 9px;
-  min-height: 42px;
+  min-height: 44px;
   padding: 10px 18px;
-  border-radius: 9px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
   line-height: 1.2;
   white-space: nowrap;
@@ -200,7 +208,7 @@ p {
     border-color 0.15s;
 }
 .button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 .button:disabled {
   opacity: 0.62;
@@ -208,15 +216,15 @@ p {
   transform: none;
 }
 .button-small {
-  min-height: 37px;
-  padding: 8px 14px;
+  min-height: 40px;
+  padding: 8px 16px;
 }
 .button-dark {
-  background: var(--ink);
-  color: white;
+  background: #f5bd67;
+  color: #111b43;
 }
 .button-dark:hover {
-  background: #2b3d59;
+  background: #ffd18a;
 }
 .button-primary {
   background: var(--blue);
@@ -226,7 +234,7 @@ p {
   background: var(--blue-dark);
 }
 .button-outline {
-  border: 1px solid #c9d4e4;
+  border: 1px solid #c8d1e2;
   background: white;
   color: var(--ink);
 }
@@ -237,19 +245,24 @@ p {
 .site-footer {
   border-top: 1px solid var(--line);
   margin-top: 80px;
-  background: #fff;
+  background: #ecf0f6;
 }
 .footer-inner {
-  min-height: 84px;
+  min-height: 92px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 12px;
 }
 .footer-inner span:first-child {
-  font-size: 18px;
-  font-weight: 800;
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 700;
   color: var(--ink);
-  letter-spacing: -0.06em;
+  letter-spacing: -0.07em;
+}
+.footer-inner span:last-child {
+  font-family: var(--mono);
+  font-size: 10px;
 }

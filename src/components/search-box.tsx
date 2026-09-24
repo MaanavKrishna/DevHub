@@ -29,9 +29,11 @@ export function SearchBox({
         name="q"
         defaultValue={defaultValue}
         placeholder={
-          type === "users"
-            ? "Search developers by name or username"
-            : "Search repositories, topics, or technologies"
+          large
+            ? "Search GitHub projects"
+            : type === "users"
+              ? "Search developers by name or username"
+              : "Search repositories, topics, or technologies"
         }
         required
         maxLength={100}

@@ -1,6 +1,10 @@
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
   .hero-grid {
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 10px;
+  }
+  .hero h1 {
+    font-size: clamp(67px, 7vw, 90px);
   }
   .hero-visual {
     transform: scale(0.82);
@@ -8,9 +12,6 @@
   }
   .detail-grid {
     grid-template-columns: minmax(0, 1fr) 280px;
-  }
-  .results-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .auth-page {
     gap: 30px;
@@ -21,24 +22,24 @@
     width: min(100% - 36px, 620px);
   }
   .site-header {
-    height: 66px;
+    height: 68px;
   }
   .nav-inner {
     gap: 12px;
   }
   .brand {
-    font-size: 23px;
+    font-size: 24px;
   }
   .main-nav {
     display: none;
     position: absolute;
     left: 0;
     right: 0;
-    top: 66px;
-    background: #fff;
-    border-bottom: 1px solid var(--line);
+    top: 68px;
+    background: #111b43;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     padding: 12px 18px;
-    box-shadow: 0 16px 20px rgba(20, 35, 60, 0.08);
+    box-shadow: 0 16px 20px rgba(20, 35, 60, 0.15);
   }
   .main-nav.is-open {
     display: grid;
@@ -60,42 +61,41 @@
     min-height: 0;
   }
   .hero-copy {
-    padding: 62px 0 20px;
+    padding: 70px 0 20px;
   }
   .hero h1 {
-    font-size: clamp(45px, 11vw, 65px);
+    font-size: clamp(59px, 12vw, 82px);
   }
   .hero-copy > p {
     font-size: 15px;
   }
   .hero-visual {
-    height: 330px;
+    height: 370px;
     transform: scale(0.65);
     transform-origin: top center;
-    margin-bottom: -110px;
+    margin-bottom: -120px;
   }
   .home-lower {
-    padding-top: 60px;
+    padding-top: 75px;
   }
   .section-heading {
     display: block;
   }
   .section-heading p {
-    margin-top: 14px;
+    margin-top: 20px;
   }
   .feature-grid {
     grid-template-columns: 1fr;
-    gap: 13px;
   }
   .feature {
-    min-height: 0;
-    padding: 25px;
-  }
-  .feature-icon {
-    margin-bottom: 16px;
+    min-height: 290px;
   }
   .page-space {
-    padding-top: 35px;
+    padding-top: 45px;
+  }
+  .page-heading h1,
+  .dashboard-heading h1 {
+    font-size: clamp(45px, 9vw, 65px);
   }
   .results-grid,
   .detail-repos,
@@ -105,13 +105,13 @@
   }
   .detail-hero {
     display: block;
-    padding: 25px;
+    padding: 28px;
   }
   .identity-row {
     align-items: flex-start;
   }
   .detail-actions {
-    margin-top: 23px;
+    margin-top: 26px;
     flex-wrap: wrap;
   }
   .detail-grid {
@@ -129,11 +129,13 @@
     border-right: 0;
   }
   .stat-strip .stat:nth-child(-n + 2) {
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
   .auth-page {
     display: block;
     min-height: 0;
+    padding-top: 55px;
+    padding-bottom: 55px;
   }
   .auth-form-card {
     margin: 0 auto;
@@ -145,12 +147,12 @@
     grid-template-columns: repeat(3, 1fr);
   }
   .dashboard-summary > div {
-    padding: 17px;
+    padding: 20px;
   }
   .dashboard-summary > a {
     grid-column: 1/-1;
-    padding: 15px 17px;
-    border-top: 1px solid var(--line);
+    padding: 17px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
   .compare-form {
     display: grid;
@@ -164,28 +166,33 @@
     width: 100%;
   }
   .site-footer {
-    margin-top: 45px;
+    margin-top: 55px;
   }
 }
 @media (max-width: 490px) {
   .shell {
-    width: calc(100% - 28px);
+    width: calc(100% - 30px);
   }
   .nav-actions .button-small {
-    min-height: 34px;
-    font-size: 12px;
-    padding: 7px 10px;
+    min-height: 36px;
+    font-size: 11px;
+    padding: 7px 11px;
   }
   .hero-copy {
-    padding-top: 46px;
+    padding-top: 54px;
   }
   .hero h1 {
-    font-size: 44px;
+    font-size: clamp(51px, 12vw, 63px);
+    margin-top: 31px;
   }
   .hero-visual {
     transform: scale(0.52);
-    height: 285px;
+    height: 300px;
     margin-bottom: -135px;
+  }
+  .hero-bottom {
+    font-size: 8px;
+    gap: 8px;
   }
   .search-box {
     gap: 8px;
@@ -195,23 +202,24 @@
     font-size: 12px;
   }
   .search-box button {
-    padding: 11px 12px;
+    padding: 11px 13px;
+    min-height: 41px;
   }
   .quick-searches {
     gap: 6px;
   }
-  .quick-searches span {
+  .quick-searches > span {
     width: 100%;
   }
   .section-heading h2 {
-    font-size: 28px;
+    font-size: 52px;
   }
   .search-workspace {
-    padding: 13px;
+    padding: 17px;
   }
   .search-tab {
     font-size: 11px;
-    padding: 8px;
+    padding: 10px 11px;
   }
   .results-heading {
     align-items: start;
@@ -224,12 +232,12 @@
     height: 66px;
   }
   .identity-copy h1 {
-    font-size: 30px;
+    font-size: 32px;
   }
   .detail-actions .button {
-    font-size: 12px;
+    font-size: 11px;
     min-height: 39px;
-    padding: 9px 12px;
+    padding: 9px 11px;
   }
   .detail-side {
     display: block;
@@ -238,7 +246,7 @@
     padding: 17px;
   }
   .stat strong {
-    font-size: 23px;
+    font-size: 25px;
   }
   .language-list {
     grid-template-columns: 1fr;
@@ -259,20 +267,20 @@
     padding: 7px;
   }
   .dashboard-summary strong {
-    font-size: 21px;
+    font-size: 27px;
   }
   .dashboard-summary span {
-    font-size: 10px;
+    font-size: 9px;
   }
   .footer-inner {
     display: block;
-    padding: 20px 0;
+    padding: 22px 0;
   }
   .footer-inner span {
     display: block;
   }
   .footer-inner span + span {
-    margin-top: 5px;
+    margin-top: 6px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

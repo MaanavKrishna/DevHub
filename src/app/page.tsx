@@ -1,9 +1,10 @@
 import Link from "next/link";
 import {
+  ArrowDownRight,
   ArrowRight,
-  Code2,
+  ArrowUpRight,
+  GitCompareArrows,
   GitFork,
-  Radar,
   Search,
   Star,
   Users,
@@ -17,121 +18,144 @@ export default function Home() {
         <div className="shell hero-grid">
           <div className="hero-copy">
             <div className="hero-kicker">
-              <span className="pulse-dot" /> A clearer view of open source
+              <span className="pulse-dot" /> THE OPEN SOURCE OBSERVATORY{" "}
+              <span> / 01</span>
             </div>
             <h1>
-              Find the people.
+              Good code has
               <br />
-              <span>Follow the work.</span>
+              <em>a story.</em>
+              <span className="hero-asterisk">✳</span>
             </h1>
             <p>
-              Search GitHub developers and repositories, explore the signals
-              behind the code, and keep the discoveries worth coming back to.
+              Find the people behind the projects. Follow the signals,
+              understand the work, and save what deserves a closer look.
             </p>
             <SearchBox large />
             <div className="quick-searches">
-              <span>Try a search</span>
+              <span>START SOMEWHERE</span>
               <Link href="/search?type=repositories&q=typescript">
-                TypeScript
+                TypeScript <ArrowUpRight size={13} />
               </Link>
-              <Link href="/search?type=users&q=design">Designers</Link>
-              <Link href="/search?type=repositories&q=machine+learning">
-                Machine learning
+              <Link href="/search?type=users&q=design">
+                Designers <ArrowUpRight size={13} />
+              </Link>
+              <Link href="/search?type=repositories&q=developer+tools">
+                Developer tools <ArrowUpRight size={13} />
               </Link>
             </div>
           </div>
-          <div className="hero-visual" aria-hidden="true">
+          <div
+            className="hero-visual"
+            aria-label="Illustration of connected open source activity"
+            role="img"
+          >
+            <div className="visual-grid" />
+            <div className="visual-coordinate coordinate-top">
+              38° 53′ 42″ N
+            </div>
+            <div className="visual-coordinate coordinate-side">
+              OPEN SOURCE / IN MOTION
+            </div>
             <div className="visual-orbit orbit-one" />
             <div className="visual-orbit orbit-two" />
-            <div className="visual-axis axis-x" />
-            <div className="visual-axis axis-y" />
-            <div className="visual-main">
-              <div className="visual-top">
-                <span className="visual-badge">
-                  <Code2 size={18} />
-                </span>
-                <span>Explore the ecosystem</span>
-                <span className="visual-live">
-                  <span /> Live
-                </span>
-              </div>
-              <div className="visual-graph">
-                <span className="graph-line graph-line-a" />
-                <span className="graph-line graph-line-b" />
-                <span className="graph-line graph-line-c" />
-                <i className="node node-a" />
-                <i className="node node-b" />
-                <i className="node node-c" />
-                <i className="node node-d" />
-                <i className="node node-e" />
-              </div>
-              <div className="visual-bottom">
-                <span>
-                  <Star size={15} /> Discover
-                </span>
-                <span>
-                  <GitFork size={15} /> Understand
-                </span>
-                <span>
-                  <Users size={15} /> Connect
-                </span>
-              </div>
+            <div className="visual-orbit orbit-three" />
+            <div className="visual-core">
+              <span>✳</span>
             </div>
-            <div className="floating-tag tag-one">
-              <Radar size={17} /> Signals in focus
+            <div className="orbit-point point-a">
+              <Star size={16} />
+              <span>discover</span>
             </div>
-            <div className="floating-tag tag-two">
-              <span className="tiny-dot" /> Public GitHub data
+            <div className="orbit-point point-b">
+              <GitFork size={16} />
+              <span>understand</span>
+            </div>
+            <div className="orbit-point point-c">
+              <Users size={16} />
+              <span>connect</span>
+            </div>
+            <div className="visual-index">
+              01 <span>/</span> ∞
             </div>
           </div>
+        </div>
+        <div className="hero-bottom shell">
+          <span>EXPLORE THE ECOSYSTEM</span>
+          <ArrowDownRight size={20} />
+          <span>SCROLL TO DISCOVER</span>
         </div>
       </section>
       <section className="shell home-lower">
         <div className="section-heading">
           <div>
-            <span className="section-rule" />
-            <h2>Go from curious to informed.</h2>
+            <span className="section-rule">THE WORKFLOW / 02</span>
+            <h2>
+              From curious
+              <br />
+              to <em>informed.</em>
+            </h2>
           </div>
           <p>
-            One place for the context you need before you star, follow, or
-            contribute.
+            Everything you need to make sense of the people and projects moving
+            open source forward.
           </p>
         </div>
         <div className="feature-grid">
-          <div className="feature">
-            <span className="feature-icon blue">
-              <Search size={22} />
-            </span>
-            <h3>Search with intent</h3>
-            <p>
-              Find developers and repositories by what you care about, then go
-              straight to the details.
-            </p>
-          </div>
-          <div className="feature">
-            <span className="feature-icon teal">
-              <Radar size={22} />
-            </span>
-            <h3>See the whole picture</h3>
-            <p>
-              Read activity, contributors, and language mix alongside the
-              familiar GitHub numbers.
-            </p>
-          </div>
-          <div className="feature">
-            <span className="feature-icon coral">
-              <Star size={22} />
-            </span>
-            <h3>Keep your shortlist</h3>
-            <p>
-              Save the people and projects you want to watch in one personal
-              workspace.
-            </p>
-          </div>
+          <Link className="feature feature-primary" href="/search">
+            <span className="feature-number">01 / DISCOVER</span>
+            <Search size={30} />
+            <div>
+              <h3>
+                Look beyond
+                <br />
+                the name.
+              </h3>
+              <p>
+                Search repositories and developers with a clearer path to the
+                details that matter.
+              </p>
+            </div>
+            <ArrowUpRight className="feature-arrow" size={24} />
+          </Link>
+          <Link className="feature" href="/compare">
+            <span className="feature-number">02 / COMPARE</span>
+            <GitCompareArrows size={30} />
+            <div>
+              <h3>
+                Put the work
+                <br />
+                side by side.
+              </h3>
+              <p>
+                Compare projects or developers and see their numbers in context.
+              </p>
+            </div>
+            <ArrowUpRight className="feature-arrow" size={24} />
+          </Link>
+          <Link className="feature" href="/dashboard">
+            <span className="feature-number">03 / COLLECT</span>
+            <Star size={30} />
+            <div>
+              <h3>
+                Keep what
+                <br />
+                stands out.
+              </h3>
+              <p>
+                Build your own shortlist of people and repositories worth
+                revisiting.
+              </p>
+            </div>
+            <ArrowUpRight className="feature-arrow" size={24} />
+          </Link>
         </div>
-        <Link className="text-link" href="/search">
-          Start exploring <ArrowRight size={18} />
-        </Link>
+        <div className="home-outro">
+          <span>LESS SCROLLING. MORE SIGNAL.</span>
+          <Link href="/search">
+            Start exploring <ArrowRight size={20} />
+          </Link>
+        </div>
       </section>
     </>
   );

@@ -42,13 +42,13 @@ The development and build commands generate Prisma Client automatically. Never c
 
 ## Deployment from GitHub
 
-GitHub stores the repository and runs checks; **Vercel runs the Next.js site and REST API**, while a hosted PostgreSQL service such as Neon stores user data. GitHub Pages cannot run this app's server routes or database-backed login.
+GitHub stores the repository and runs checks; **Vercel runs the Next.js site and REST API**, while Prisma Postgres stores user data. GitHub Pages cannot run this app's server routes or database-backed login.
 
 1. Push this repository to GitHub.
-2. Provision a PostgreSQL database and apply migrations with `DATABASE_URL=<production-url> npm run db:migrate` from a trusted environment.
+2. Provision a PostgreSQL database and connect it to the Vercel project. The Prisma Postgres Marketplace integration supplies `DATABASE_URL` automatically.
 3. Import the GitHub repository into Vercel as a Next.js project.
 4. Set `DATABASE_URL`, `BETTER_AUTH_SECRET`, `BETTER_AUTH_URL` (the production site URL), and optionally `GITHUB_TOKEN` in Vercel project environment variables. Do not prefix secrets with `NEXT_PUBLIC_`.
-5. Deploy. Vercel builds and serves the site and `/api` routes together. Run migrations before deploying schema changes.
+5. Deploy. Vercel builds and serves the site and `/api` routes together. Its production build applies pending Prisma migrations before compiling; preview builds do not migrate the shared database.
 
 `npm run build` runs Prisma Client generation and a production Next.js build. For previews, set a preview-compatible `BETTER_AUTH_URL` or configure a stable custom preview domain before testing authentication redirects.
 

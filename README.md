@@ -2,6 +2,8 @@
 
 A full-stack GitHub discovery workspace. Search public developers and repositories, inspect project statistics and activity, compare two profiles or projects, and save favourites to a personal dashboard.
 
+**Live site:** [devhub-sandy.vercel.app](https://devhub-sandy.vercel.app)
+
 ## Stack
 
 - **Next.js App Router + TypeScript** for pages and REST route handlers in one deployment

@@ -4,6 +4,12 @@ A full-stack GitHub discovery workspace. Search public developers and repositori
 
 **Live site:** [devhub-sandy.vercel.app](https://devhub-sandy.vercel.app)
 
+## 60-second demo
+
+[![Watch the DevHub demo](docs/devhub-demo-poster.png)](docs/devhub-demo-60s.mp4)
+
+The [video walkthrough](docs/devhub-demo-60s.mp4) shows live search, developer and repository details, activity, comparisons, account pages, and a dashboard with saved items.
+
 ## Stack
 
 - **Next.js App Router + TypeScript** for pages and REST route handlers in one deployment

@@ -6,9 +6,9 @@ A full-stack GitHub discovery workspace. Search public developers and repositori
 
 ## 60-second demo
 
-[![Watch the DevHub demo](docs/devhub-demo-poster.png)](docs/devhub-demo-60s.mp4)
+![DevHub 60-second walkthrough](docs/devhub-demo-60s.gif)
 
-The [video walkthrough](docs/devhub-demo-60s.mp4) shows live search, developer and repository details, activity, comparisons, account pages, and a dashboard with saved items.
+[Download the full-resolution MP4](https://github.com/MaanavKrishna/DevHub/raw/refs/heads/main/docs/devhub-demo-60s.mp4). The walkthrough shows live search, developer and repository details, activity, comparisons, account pages, and a dashboard with saved items.
 
 ## Stack
 
